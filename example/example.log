@@ -1,0 +1,3 @@
+{"level":"DEBUG","message":"custom debug log","tag":{"id":"1001","type":"test"},"time":"2019-10-28 23:41:34.385"}
+{"level":"ERROR","message":"custom error log","time":"2019-10-28 23:41:34.386"}
+{"level":"record","message":"custom log","tag":{"id":"1001","type":"test"},"time":"2019-10-28 23:41:34.386"}
