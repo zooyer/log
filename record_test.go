@@ -141,3 +141,17 @@ func TestNewRecordBufferSize(t *testing.T) {
 	buf.Flush()
 	t.Log("buf:", time.Now().Sub(start))
 }
+
+func TestNewMultiRecorder(t *testing.T) {
+	var record = new(Record)
+	record.Time = time.Now()
+	record.Level = "DEBUG"
+	record.Tag = Tag{
+		"key": "val",
+	}
+
+	stdout := NewStdoutRecorder(FormatColorText)
+	recorder := NewMultiRecorder(stdout, stdout, stdout)
+
+	recorder.Record(record)
+}
